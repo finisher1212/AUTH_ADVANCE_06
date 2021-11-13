@@ -9,12 +9,12 @@
     <title>Login</title>
 </head>
 <body>
+  <h1><strong><center>Login Please</center></strong></h1>
     <form method="post">
         {% csrf_token %}
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="username">
-          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          <label for="exampleInputEmail1" class="form-label">Username</label>
+          <input type="text" class="form-control" name="username">
         </div>
         <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label">Password</label>
@@ -23,5 +23,22 @@
 
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
+
+      <div class="col" style=" top: 54%;  left:-21%" >
+        <!-- Simple link -->
+        <strong><a href="{% url 'password_reset' %}" >Forgot password?</a></strong>
+      </div>
+
+      <div class="col" style=" top: 54%;  left:-21%" >
+        <!-- Simple link -->
+        <strong><a href="{% url 'change_password' %}" >Change password!</a></strong>
+      </div>
+
+
+
+    </div>
+
+
+
 </body>
 </html>
