@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>otp Verify</title>
+</head>
+<body>
+    <h1>Verify OTP</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label>Enter OTP</label>
+        <input type="text" name = 'uOTP' required>
+        <input type="submit" value="Enter">
+        {% for msg in messages %}
+        <p style = 'color:tomato;'>{{msg}}</p>
+        {% endfor %}
+    </form>
+</body>
+</html>
